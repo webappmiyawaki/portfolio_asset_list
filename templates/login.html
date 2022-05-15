@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5 mb5">
+
+    <h1 class="mb-5">ログイン</h1>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">入力情報</h4>
+            <form class="needs-validation" novalidate>
+                <hr class="mb-4">
+
+                <div class="mb-3">
+                    <label for="name">名前<span class="text-muted">(必須)</span></label>
+                    <input type="text" class="form-control" id="name" placeholder="username">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">パスワード <span class="text-muted">(必須)</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="password">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">ログイン</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

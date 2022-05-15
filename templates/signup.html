@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5 mb5">
+
+    <h1 class="mb-5">新規登録</h1>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">ユーザー情報</h4>
+            <form class="needs-validation" novalidate>
+                <hr class="mb-4">
+
+                <div class="mb-3">
+                    <label for="username">名前<span class="text-muted">(必須)</span></label>
+                    <input type="text" class="form-control" id="username" placeholder="username">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">パスワード <span class="text-muted">(必須)</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="password">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="display_name">表示名<span class="text-muted">(任意)</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="display_name" placeholder="display_name" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="address">住所：福岡市○○区</label>
+                        <select class="custom-select d-block w-100" id="address" required>
+                            <option value="">Choose...</option>
+                            <option>博多区</option>
+                            <option>中央区</option>
+                            <option>東区</option>
+                            <option>西区</option>
+                            <option>南区</option>
+                            <option>城南区</option>
+                            <option>早良区</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid city.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-block my-3">
+                <div class="mb-3">
+                    <label for="user_type">権限</label>
+                    <div class="custom-control custom-radio">
+                        <input id="admin" name="registrationAuthorityMethod" type="radio" class="custom-control-input" checked required>
+                        <label class="custom-control-label" for="admin">管理者</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="general" name="registrationAuthorityMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="general">一般</label>
+                    </div>
+                </div> </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">新規登録</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
