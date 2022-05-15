@@ -79,16 +79,18 @@ def signup():  # put application's code here
         return render_template('signup.html', title="signup")
 
 
-@app.route('/list/<string:user_name>', methods=['GET', 'POST'])
-def user(user_name):  # put application's code here
-    return render_template('list.html', title="view_list", html_user_name=user_name)
+@app.route('/asset_list', methods=['GET', 'POST'])
+def asset_list():  # put application's code here
+    asset = Asset.query.all()
+    return render_template('asset_list.html', title="asset_list", posts=asset)
 
 
 @app.route('/user_list', methods=['GET', 'POST'])
-def index():
+def user_list():
     if request.method == 'GET':
         users = User.query.all()
         return render_template('user_list.html', posts=users)
+
 
 if __name__ == '__main__':
     app.run()
