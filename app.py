@@ -85,10 +85,11 @@ def user(user_name):  # put application's code here
 
 
 @app.route('/user_list', methods=['GET', 'POST'])
-def index():
+def user_list():
     if request.method == 'GET':
         users = User.query.all()
         return render_template('user_list.html', posts=users)
+
 
 if __name__ == '__main__':
     app.run()

@@ -10,16 +10,16 @@
                 <hr class="mb-4">
 
                 <div class="mb-3">
-                    <label for="username">名前<span class="text-muted">(必須)</span></label>
-                    <input type="text" class="form-control" id="username" placeholder="username">
+                    <label for="user_name">名前<span class="text-muted">(必須)</span></label>
+                    <input type="text" class="form-control" id="user_name" placeholder="username">
                     <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="password">パスワード <span class="text-muted">(必須)</span></label>
-                    <input type="password" class="form-control" id="password" placeholder="password">
+                    <label for="user_password">パスワード <span class="text-muted">(必須)</span></label>
+                    <input type="password" class="form-control" id="user_password" placeholder="password">
                     <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>
@@ -41,8 +41,8 @@
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="address">住所：福岡市○○区</label>
-                        <select class="custom-select d-block w-100" id="address" required>
+                        <label for="user_address">住所：福岡市○○区</label>
+                        <select class="custom-select d-block w-100" id="user_address" required>
                             <option value="">Choose...</option>
                             <option>博多区</option>
                             <option>中央区</option>
@@ -62,11 +62,11 @@
                 <div class="mb-3">
                     <label for="user_type">権限</label>
                     <div class="custom-control custom-radio">
-                        <input id="admin" name="registrationAuthorityMethod" type="radio" class="custom-control-input" checked required>
+                        <input id="admin" name="user_type" type="radio" class="custom-control-input" checked required>
                         <label class="custom-control-label" for="admin">管理者</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="general" name="registrationAuthorityMethod" type="radio" class="custom-control-input" required>
+                        <input id="general" name="user_type" type="radio" class="custom-control-input" required>
                         <label class="custom-control-label" for="general">一般</label>
                     </div>
                 </div> </div>
